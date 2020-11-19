@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "ef2bd721-2795-4085-977a-d02c18d18df6",
+		"name": "SchoolGrades",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Grades By StudentId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44330/api/v1/SchoolGrades/get?studentId=2019-1342",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"v1",
+						"SchoolGrades",
+						"get"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "2019-1342"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Grades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44330/api/v1/SchoolGrades/getall",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"v1",
+						"SchoolGrades",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Grades Succesfully",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod\": \"ISO-NOSE\",\r\n    \"subjectName\": \"Relaciones Humana\",\r\n    \"careerName\": \"Ing. de software\",\r\n    \"quater\": \"1er\",\r\n    \"studentName\": \"Juan Perez\",\r\n    \"studentId\": \"2019-1214\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44330/api/v1/SchoolGrades/save",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"v1",
+						"SchoolGrades",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Grades Validation Errors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod\": \"\",\r\n    \"subjectName\": \"Programacion\",\r\n    \"careerName\": \"Ing. de software\",\r\n    \"quater\": \"4to\",\r\n    \"studentName\": \"Nelson Veras\",\r\n    \"studentId\": \"2019-1342\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44330/api/v1/SchoolGrades/save",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"v1",
+						"SchoolGrades",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
